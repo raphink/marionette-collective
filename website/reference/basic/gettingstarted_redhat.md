@@ -130,8 +130,8 @@ Other examples are also available from [GitHub][ActiveMQSamples]
         </systemUsage>
 
         <transportConnectors>
-            <transportConnector name="openwire" uri="tcp://0.0.0.0:6166"/>
-            <transportConnector name="stomp" uri="stomp://0.0.0.0:6163"/>
+            <transportConnector name="openwire" uri="tcp://0.0.0.0:61616"/>
+            <transportConnector name="stomp" uri="stomp://0.0.0.0:61613"/>
         </transportConnectors>
     </broker>
 </beans>
@@ -154,9 +154,9 @@ You should see it running in the process list:
  activemq  3012  0.1 14.5 1155112 152180 ?      Sl   Dec28   2:02 java -Dactivemq.home=/usr/share/activemq -Dactivemq.base=/usr/share/activemq -Dcom.sun.management.jmxremote -Dorg.apache.activemq.UseDedicatedTaskRunner=true -Xmx512m -Djava.library.path=/usr/lib:/usr/lib64 -classpath /usr/share/java/tanukiwrapper.jar:/usr/share/activemq/bin/run.jar -Dwrapper.key=eg4_VvENzCmvtAKg -Dwrapper.port=32000 -Dwrapper.jvm.port.min=31000 -Dwrapper.jvm.port.max=31999 -Dwrapper.pid=3000 -Dwrapper.version=3.2.3 -Dwrapper.native_library=wrapper -Dwrapper.service=TRUE -Dwrapper.cpu.timeout=10 -Dwrapper.jvmid=1 org.tanukisoftware.wrapper.WrapperSimpleApp org.apache.activemq.console.Main start
 {% endhighlight %}
 
-You should also see it listening on port 6163 in your network stack
+You should also see it listening on port 61613 in your network stack
 
-You should open port 6163 for all your nodes to connect to.
+You should open port 61613 for all your nodes to connect to.
 
 ## Marionette Collective
 
