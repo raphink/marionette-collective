@@ -101,4 +101,4 @@ printrpcstats
 
 With a standard interface come a lot of possibilities, just like the standard one-size-fits-all CLI client above you can make web interfaces, there's a [simple MCollective <-> REST bridge in the ext directory][RestGateway].
 
-A helper agent called [_rpcutil_][RPCUtil] is included from version _0.4.9_ onward that helps you gather stats, inventory etc about the running daemon.
+A helper agent called [_rpcutil_][RPCUtil] is included that helps you gather stats, inventory etc about the running daemon.

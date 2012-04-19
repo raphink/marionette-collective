@@ -47,9 +47,6 @@ We try to keep the requirements on external Gems to a minimum, you only need:
 
 RPMs for these are available [here][DepRPMs].
 
-**NOTE: You need version Stomp Gem 1.1 for mcollective up to 0.4.5.  mcollective 0.4.6 onward supports 1.1 and 1.1.6 and newer**
-
-
 ## ActiveMQ
 I've developed this against ActiveMQ.  It should work against other Stomp servers but I suspect if you choose
 one without username and password support you might have problems, please let me know if that's the case
