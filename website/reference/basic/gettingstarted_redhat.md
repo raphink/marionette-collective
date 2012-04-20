@@ -88,6 +88,15 @@ Other examples are also available from [GitHub][ActiveMQSamples]
   http://activemq.apache.org/camel/schema/spring http://activemq.apache.org/camel/schema/spring/camel-spring.xsd">
 
     <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" useJmx="true">
+        <destinationPolicy>
+          <policyMap>
+            <policyEntries>
+              <policyEntry topic=">" producerFlowControl="false"/>
+              <policyEntry queue="*.reply.>" gcInactiveDestinations="true" inactiveTimoutBeforeGC="300000" />
+            </policyEntries>
+          </policyMap>
+        </destinationPolicy>
+
         <managementContext>
             <managementContext createConnector="false"/>
         </managementContext>
@@ -189,7 +198,7 @@ We're assuming you called the machine running ActiveMQ *stomp.example.net* pleas
   # connector plugin config
   connector = stomp
   plugin.stomp.host = stomp.example.net
-  plugin.stomp.port = 6163
+  plugin.stomp.port = 61613
   plugin.stomp.user = mcollective
   plugin.stomp.password = marionette
 
@@ -210,7 +219,7 @@ You should also create _/etc/mcollective/server.cfg_ here's a sample, , a full r
   # connector plugin config
   connector = stomp
   plugin.stomp.host = stomp.example.net
-  plugin.stomp.port = 6163
+  plugin.stomp.port = 61613
   plugin.stomp.user = mcollective
   plugin.stomp.password = marionette
 
